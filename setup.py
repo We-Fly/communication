@@ -35,11 +35,6 @@ def main():
     args = parser.parse_args()
     # 如果后期有需要添加的包就写这个列表里
     pkgs = f"""
-    numpy
-    opencv-python
-    opencv-contrib-python
-    imutils
-    pillow
     pyserial
     pyserial_asyncio
     """

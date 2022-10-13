@@ -2,6 +2,17 @@
 
 此仓库可以通过python代码对无人机进行操控。
 
+## Usage
+
+你需要安装以下库
+
+```bash
+pip install pyserial_asyncio
+pip install pyserial
+```
+
+或者运行仓库中的setup.py
+
 ## TODO
 
 - [ ] 实现串口通信
