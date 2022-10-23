@@ -57,7 +57,7 @@ def checkPkgs():
         import serial
         import serial_asyncio
         print("requirements are installed")
-    except:
+    except ModuleNotFoundError:
         print("requirements not Installed")
         install()
 
