@@ -24,7 +24,7 @@ def pip_install(proxy: Optional[str], args: List[str]) -> None:
         )
 
 
-def main():
+def install():
     parser = argparse.ArgumentParser(description="install requirements")
     parser.add_argument(
         "--proxy",
@@ -52,7 +52,14 @@ def main():
             pip_install(args.proxy, line.split())
 
     print("\nsuccessfully installed requirements!")
-
+def checkPkgs():
+    try:
+        import serial
+        import serial_asyncio
+        print("requirements are installed")
+    except:
+        print("requirements not Installed")
+        install()
 
 if __name__ == "__main__":
-    main()
+    checkPkgs()
