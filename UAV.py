@@ -4,29 +4,25 @@ from .NClink import *
 from .setup import checkPkgs
 
 class UAV:
-    __height = 0
-    __isUnlock = False
-    __protocol = None
-    __serialPort = ""
+    _height = 0
+    _isUnlock = False
+    _protocol = None
+    _serialPort = ""
 
-    def __init__(self, port, protocol="NCLink", baudrate=115200) -> None:
-        self.__height = 0
-        __isUnlock = False
-        __serialPort = port
-        if protocol == "NCLink":
-            __protocol = NClink(baudrate=115200)
+    def __init__(self, port, protocol, baudrate=115200) -> None:
+        self._height = 0
+        self._isUnlock = False
+        self._serialPort = port
+        self._protocol = protocol(baudrate)
 
-    def __send__(self, protocal)-> None:
+    def __send__(self)-> None:
         pass
-
-    def checkPkg():
-        checkPkgs()
         
     def unlock(self,):
-        __isUnlock = True
+        self._isUnlock = True
 
     def lock(self,):
-        __isUnlock = False
+        self._isUnlock = False
 
     def takeoff(self):
         self.unlock()
