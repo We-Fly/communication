@@ -1,16 +1,17 @@
 # 这个文件是描述飞机类的
 from .Serial import *
 from .NClink import *
+from .ACLink import *
 
 class UAV:
     _height = 0
     _isUnlock = False
     _protocol = None
 
-    def __init__(self, port, protocol, baudrate=115200) -> None:
+    def __init__(self, protocol) -> None:
         self._height = 0
         self._isUnlock = False
-        self._protocol = protocol(baudrate, port)
+        self._protocol = protocol()
         
     def unlock(self,):
         self._isUnlock = True
