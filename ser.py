@@ -118,7 +118,7 @@ if __name__ == '__main__':
     frameWidth = 1920
     frameHeight = 1080
     # order = 's'
-    acfly = ACLink(frameWidth, frameHeight, port="COM7", baundrate=115200)
+    acfly = ACLink(frameWidth, frameHeight, port='/dev/ttyAMA0', baundrate=115200)
 
     # try:
     # ser = serial.Serial("/dev/ttyAMA0", 115200)
