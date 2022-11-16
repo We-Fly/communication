@@ -125,7 +125,7 @@ if __name__ == '__main__':
     # except Exception as error:
     #    print('___open error___:', error)
 
-    cap = cv2.VideoCapture(1)
+    cap = cv2.VideoCapture(0)
     while cap.isOpened():
         ret, frame = cap.read()
         thresh = pic(frame)
